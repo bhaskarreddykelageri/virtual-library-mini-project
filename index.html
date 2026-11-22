@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Reading Room – Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<a class="logo" href="index.html">📚 The Reading Room</a>
+<a href="index.html">Home</a>
+<a href="books.html">Books</a>
+<a href="membership.html">Membership</a>
+<a href="seats.html">Seats</a>
+<a href="podcasts.html">Podcasts</a>
+<a href="login.html">Login</a>
+<a href="account.html">Account</a>
+</nav>
+<main class="container">
+<section class="hero">
+<h1>The Reading Room</h1>
+<p>Find a book, issue it to a member, and bring it back on time.</p>
+<div class="stats">
+<div class="stat"><b id="statTotal">0</b> copies</div>
+<div class="stat"><b id="statAvail">0</b> on the shelf</div>
+<div class="stat"><b id="statOut">0</b> issued</div>
+<div class="stat"><b id="statLate">0</b> overdue</div>
+</div>
+<p>
+<a class="btn" href="books.html">Browse Books</a>
+<a class="btn secondary" href="membership.html">View Membership</a>
+</p>
+</section>
+<section class="section">
+<h2>Library Services</h2>
+<div class="grid">
+<div class="card">
+<h3>📚 Library</h3>
+<p>Search titles, authors and categories, add books, issue books and return them.</p>
+<a class="btn" href="books.html">Open Library</a>
+</div>
+<div class="card">
+<h3>💳 Membership</h3>
+<p>Free, Student and Premium plans with different loan, seat and podcast limits.</p>
+<a class="btn" href="membership.html">Plans</a>
+</div>
+<div class="card">
+<h3>💺 Reading Seats</h3>
+<p>Choose a seat and reserve a reading-room slot.</p>
+<a class="btn" href="seats.html">Book a Seat</a>
+</div>
+<div class="card">
+<h3>🎧 Podcasts</h3>
+<p>Listen to the six Reading Room podcast episodes using your browser voice.</p>
+<a class="btn" href="podcasts.html">Podcasts</a>
+</div>
+</div>
+</section>
+<section class="two">
+<div class="panel">
+<h2>Request a new book</h2>
+<p class="muted">
+Can’t find a book? Ask us to bring it. Members can vote for requests.
+</p>
+<input id="rTitle" placeholder="Book title">
+<input id="rAuthor" placeholder="Author (optional)">
+<button class="btn" onclick="requestBook()">Send request</button>
+<div id="requestList"></div>
+</div>
+<div class="panel">
+<h2>Feedback</h2>
+<select id="rating">
+<option value="">Choose rating</option>
+<option value="5">★★★★★</option>
+<option value="4">★★★★</option>
+<option value="3">★★★</option>
+<option value="2">★★</option>
+<option value="1">★</option>
+</select>
+<textarea id="fbText" rows="4"
+placeholder="Tell us what worked and what could be better"></textarea>
+<button class="btn" onclick="sendFeedback()">Send feedback</button>
+<div id="feedbackList"></div>
+</div>
+</section>
+<section class="container">
+<div class="panel">
+<h2>Service Feedback</h2>
+<p class="muted">
+Rate the Reading Room service, staff, seat booking, borrowing and overall experience.
+</p>
+<select id="serviceRating">
+<option value="">Rating</option>
+<option value="5">★★★★★ Excellent</option>
+<option value="4">★★★★ Very Good</option>
+<option value="3">★★★ Good</option>
+<option value="2">★★ Needs Improvement</option>
+<option value="1">★ Poor</option>
+</select>
+<textarea id="serviceText"
+rows="4"
+placeholder="Your service feedback"></textarea>
+<button class="btn" onclick="submitServiceFeedback()">
+Submit Service Feedback
+</button>
+<div id="serviceFeedbackList"></div>
+</div>
+</section>
+</main>
+<footer class="footer">
+© 2026 The Reading Room – Virtual Library
+</footer>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
+
+

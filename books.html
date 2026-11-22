@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Books | The Reading Room</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<a class="logo" href="index.html">📚 The Reading Room</a>
+<a href="index.html">Home</a>
+<a href="books.html">Books</a>
+<a href="membership.html">Membership</a>
+<a href="seats.html">Seats</a>
+<a href="podcasts.html">Podcasts</a>
+<a href="login.html">Login</a>
+<a href="account.html">Account</a>
+</nav>
+<main class="container">
+<h1>📚 All Books</h1>
+<div class="toolbar">
+<input
+class="search"
+id="search"
+placeholder="Search by title or author">
+</div>
+<div id="chips" class="chips"></div>
+<div class="card">
+<h2>➕ Add a Book</h2>
+<input id="newTitle" placeholder="Book title">
+<input id="newAuthor" placeholder="Author">
+<input id="newCategory" placeholder="Category">
+<input
+id="newCopies"
+type="number"
+min="1"
+value="1"
+placeholder="Copies">
+<button class="btn" onclick="addBookFromForm()">
+Add Book
+</button>
+</div>
+<div
+id="bookGrid"
+class="grid"
+style="margin-top:22px">
+</div>
+</main>
+<footer class="footer">
+© 2026 The Reading Room – Virtual Library
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
